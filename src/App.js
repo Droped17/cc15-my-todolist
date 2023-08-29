@@ -1,21 +1,11 @@
 import "./app.scss";
-import { FaHome } from 'react-icons/fa';
+import Header from "./Header";
 
 function App() {
   return (
     <div className="todo">
       <div className="todo__header">
-        <header className="header">
-            <div className="header__logo">
-                <FaHome></FaHome>
-            </div>
-              <div className="header__text">
-               <h1>Todolist</h1>
-              </div>
-            <div className="header__search">
-                <input />
-            </div>
-        </header>
+          <Header></Header>
       </div>
       <div className="todo__sidebar">SideBar</div>
       <div className="todo__content">TodoContent</div>
