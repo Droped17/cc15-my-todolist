@@ -1,0 +1,30 @@
+// HEADER
+@import '../index.scss';
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: $primary;
+    height: $header-height;
+    padding: 5px 20px;
+
+    &__logo{
+        font-size: 24px;
+        color: $white;
+        display: flex;
+        cursor: pointer;
+    }
+    &__text{
+        flex: 1;
+        color: $white;
+
+        & > h1{
+            font-size: 24px;
+        }
+    }
+    &__search{
+        min-width: 300px ;
+    }
+
+}
