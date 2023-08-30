@@ -38,3 +38,39 @@
     
   }
 }
+
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 30px;
+  height: calc(100vh - $header-height);
+  background-color: salmon;
+}
+
+.list{
+
+  &__item{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 2rem;
+      padding: 10px;
+      border-radius: 4px;
+
+      &:hover{
+        background-color: $grey-light;
+        cursor: pointer;
+      }
+
+    &__item{
+
+    }
+
+    &__text{
+      font-weight: 500;
+    }
+
+  }
+}
