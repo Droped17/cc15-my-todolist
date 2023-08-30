@@ -6,13 +6,35 @@
 
 auto open browser localhost:3000
 
+
+Start-Stop
+-pwd (current root project)
+-root level: มักจะอยู่ level เดียวกับ package.json, node_modules, .git
+-npm start
+
 `npm run build`
 เอาไว้ใช้ตอน production (Ready for production)
-
+-bundle code เหมือนกับตอน dev + Optimization (เช่น remove comment,minify == ลด white space)
+-นำ code ไป deploy
 
 # 1 About Project
-Other Code เรียกว่า dependencie
+Other Code เรียกว่า dependencies
 
+npm start(CRA)
+-เรียกใช้ script ของ library (react-script)
+-เอาโค้ดใน src มา bundle(Webpack)
+    ไล่หา index.js และดูว่ามี import อะไรบ้าง
+    ไล่หา code ที่ import ทั้งหมด
+        -code ตัวเองใน file อื่นๆ (incorrect_path,missing file, ลืม export,import,
+        import,export ผิดวิธี)
+        -code ใน node_modules (import ผิดชื่อ,ยังไม่ได้ install package)
+
+-solove import ได้หมด => bundle code เป็น 1 file JS ใหญ่
+-นำ file JS แนบ index.html ให้
+-นำ css ทั้งหมดแนบ index.html ให้ด้วย
+-นำ asset ต่างๆไปแทรกใน index.html
+-ยัดทุกอย่างที่ต้องใช้ลง dev-server (Webpack dev-server)
+-เปิด server ให้ (defalut port:3000) 
 
 # 2 : Clean up Project - remove unnecessary thing
 clean up index.js
