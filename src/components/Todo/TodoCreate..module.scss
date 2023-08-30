@@ -1,0 +1,43 @@
+@import '../../index.scss';
+
+.todo__create{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+
+    &__text{
+        color: $grey-dark;
+        font-size: 1.6rem;
+        font-weight: 500;
+
+    }
+
+    &:hover{
+        
+        & .todo__create__button{
+            background-color: $primary;
+            color: $white;
+        }
+
+        & .todo__create__text{
+            color: $primary;
+        }
+    }
+}
+
+.todo__create__button{
+    font-size: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.2rem;
+
+
+
+
+}

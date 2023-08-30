@@ -8,6 +8,8 @@ import "./app.scss";
 import Header from "./components/Header";
 import Lists from "./components/Lists";
 import TodoHeader from "./components/Todo/TodoHeader";
+import TodoCreate from "./components/Todo/TodoCreate";
+import TodoLists from "./components/Todo/TodoLists";
 
 function App() {
   const generalLists = [
@@ -56,12 +58,17 @@ function App() {
         </aside>
       </div>
       <div className="todo__content">
-          <main className="todo__contaion">
+          <main className="todo__container">
+
               {/* Header */}
             <TodoHeader></TodoHeader>
+
               {/* CreateTodo */}
+            <TodoCreate></TodoCreate>
 
               {/* TodoLists */}
+            <TodoLists></TodoLists>
+
           </main>
       </div>
     </div>
