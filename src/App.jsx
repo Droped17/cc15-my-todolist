@@ -7,6 +7,7 @@ import {
 import "./app.scss";
 import Header from "./components/Header";
 import Lists from "./components/Lists";
+import TodoHeader from "./components/Todo/TodoHeader";
 
 function App() {
   const generalLists = [
@@ -38,6 +39,7 @@ function App() {
 
           <section className="sidebar__category">
             <div className="accordion">
+
               {/* Toggle */}
               <div className="accordion__toggle">
                 <li className="accordion__item">
@@ -53,9 +55,29 @@ function App() {
           </section>
         </aside>
       </div>
-      <div className="todo__content">TodoContent</div>
+      <div className="todo__content">
+          <main className="todo__contaion">
+              {/* Header */}
+            <TodoHeader></TodoHeader>
+              {/* CreateTodo */}
+
+              {/* TodoLists */}
+          </main>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
+/* 
+Challenge
+ให้ 2 section render UI ที่..
+  - Option A: ต่างกัน <Lists/> กับ <Accordion />
+  - Option B: render UI เดียวกัน เช่น <Lists />
+  - Option C: render <Lists/> ภายใต้ <Accordion> <List/> </Accordion> 
+    ใช้วิธี porps.children
+*/
+
+
